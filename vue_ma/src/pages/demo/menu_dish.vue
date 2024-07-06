@@ -1,5 +1,6 @@
 <template>
     <div class="navigate"><h1 style="color: white">二维码生成</h1></div>
+    <div class="botton"><exit1 v-if="$route.name === 'Menu'"></exit1 ></div>
     <div class="container">
         <ul v-infinite-scroll="load" class="infinite-list" style="overflow: auto">
             <li v-for="i in count" :key="i" class="infinite-list-item">
@@ -37,7 +38,7 @@
 
 <script>
 import { ref, onMounted, onUpdated } from 'vue';
-
+import exit1 from './exit.vue';
 import { ArrowLeft, ArrowRight, Edit } from '@element-plus/icons-vue';
 import { focusableStack } from 'vuesax-alpha/es/components/focus-trap/src/utils';
 import Delete from './deleteMa.vue';
@@ -47,7 +48,8 @@ export default {
     components: {
         Delete,
         creatNew,
-        modifyErWeiMa
+        modifyErWeiMa,
+        exit1
     },
 
     setup() {
@@ -108,6 +110,11 @@ export default {
 </script>
 
 <style scoped>
+.botton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
 .container {
     margin-top: 10px;
     height: 500px;

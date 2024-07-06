@@ -1,13 +1,19 @@
 <template>
     <div>
         <router-view></router-view>
+        <div class="botton"><sign v-if="$route.name === 'home'"></sign ></div>
     </div>
 </template>
 
 <script lang="js">
+import Menu from './pages/demo/menu_dish.vue';
+import sign from './pages/demo/sign.vue';
 export default {
     name: 'App',
-    components: {},
+    components: {
+        Menu,
+        sign
+    },
     data() {
         return {};
     },
@@ -28,4 +34,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.botton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+</style>
