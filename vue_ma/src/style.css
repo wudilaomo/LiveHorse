@@ -19,10 +19,10 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #f4f4f4;
+ 
     margin: 0;
     padding: 0;
-
+    background: linear-gradient(-45deg,#3ec9ce, #2382d5, #c547f2,#fa5bca);
     background-size: 400% 400%;
     -webkit-animation: Gradient 10s linear infinite;
     -moz-animation: Gradient 10s linear infinite;
@@ -112,6 +112,13 @@ h1 {
     color: #333;
     text-align: center;
 }
+.navigate h1 {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* 文本居中 */
+    font-family: 'Arial', sans-serif; /* 自定义字体系列 */
+  }
 
 ol {
     font-size: 1.2rem;
